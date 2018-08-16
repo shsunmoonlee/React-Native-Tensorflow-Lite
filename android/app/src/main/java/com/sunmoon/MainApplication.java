@@ -3,6 +3,10 @@ package com.sunmoon;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rntensorflow.RNTensorFlowPackage;
+import com.rnfs.RNFSPackage;
+import com.zmxv.RNSound.RNSoundPackage;
+import org.reactnative.camera.RNCameraPackage;
 import com.i18n.reactnativei18n.ReactNativeI18n;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
@@ -26,6 +30,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNTensorFlowPackage(),
+            new RNFSPackage(),
+            new RNSoundPackage(),
+            new RNCameraPackage(),
             new ReactNativeI18n(),
             new VectorIconsPackage(),
             new RNDeviceInfo()
