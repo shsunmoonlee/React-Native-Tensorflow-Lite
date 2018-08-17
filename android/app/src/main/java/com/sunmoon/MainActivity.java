@@ -3,7 +3,7 @@ package com.sunmoon;
 import com.facebook.react.ReactActivity;
 import com.sh3rawi.RNAudioPlayer.*; // <--- import
 import com.rnfs.RNFSPackage;  // <--- import
-import org.tensorflow.lite.Interpreter;
+// import org.tensorflow.lite.Interpreter;
 
 public class MainActivity extends ReactActivity {
 
@@ -24,11 +24,11 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "SunMoon";
     }
-    protected Interpreter tflite;
-    tflite = new Interpreter(loadModelFile(activity));
-    protected List<ReactPackage> getPackages() {
-        return Arrays.<ReactPackage>asList(
-                new MainReactPackage(),
-                new CustomImageClassifierPackage()); // <-- Add this line with your package name.
-    }
+    // protected Interpreter tflite;
+    // tflite = new Interpreter(loadModelFile(activity));
+    // protected List<ReactPackage> getPackages() {
+    //     return Arrays.<ReactPackage>asList(
+    //             new MainReactPackage(),
+    //             new CustomImageClassifierPackage()); // <-- Add this line with your package name.
+    // }
 }

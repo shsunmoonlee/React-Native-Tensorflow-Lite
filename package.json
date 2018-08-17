@@ -24,6 +24,8 @@
     "git-hook": "npm run lint -s && npm run test -s"
   },
   "dependencies": {
+    "@feathersjs/authentication-client": "^1.0.2",
+    "@feathersjs/client": "^3.5.6",
     "@feathersjs/feathers": "^3.1.7",
     "@feathersjs/socketio-client": "^1.1.0",
     "apisauce": "^0.14.2",
@@ -41,11 +43,13 @@
     "react-native-camera": "^1.2.0",
     "react-native-config": "^0.10.0",
     "react-native-device-info": "0.11.0",
+    "react-native-elements": "^0.19.1",
     "react-native-fs": "^2.11.15",
+    "react-native-gifted-chat": "^0.4.3",
     "react-native-i18n": "1.0.0",
     "react-native-sound": "^0.10.9",
     "react-native-tensorflow": "^0.1.8",
-    "react-native-vector-icons": "4.3.0",
+    "react-native-vector-icons": "^5.0.0",
     "react-navigation": "1.0.0-beta.11",
     "react-navigation-redux-helpers": "^1.0.4",
     "react-redux": "^5.0.6",

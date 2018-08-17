@@ -98,20 +98,22 @@ class ObjectDetectScreen extends Component {
       })
 
       const url = 'http://localhost:8000'
-      const fileName = data.uri.split('/')[data.uri.split('/').length - 1];
+      const fileName = data.uri.split('/')[data.uri.split('/').length - 1]
+      const someData = { url, type: 'image/jpeg', name: fileName }
       const postData = {
         fileName,
-        {url, type: 'image/jpeg', name: fileName},
+        someData,
       }
-      const options = {
+      const headers = { 'content-type': 'application/x-www-form-urlencoded' }
+      const apiOptions = {
         method: 'POST',
-        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        headers: headers,
         data: postData,
         url,
       };
 
       try {
-        const results = await axios.post(options)
+        const results = await axios.post(apiOptions)
         this.setState({
           isUploading: false,
           results
