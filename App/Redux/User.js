@@ -4,7 +4,7 @@ import Immutable from 'seamless-immutable'
 /* ------------- Types and Action Creators ------------- */
 
 const { Types, Creators } = createActions({
-  login: ['user', 'isAuthenticated'],
+  login: ['payload'],
 })
 
 export const UserTypes = Types
@@ -14,21 +14,22 @@ export default Creators
 
 export const INITIAL_STATE = Immutable({
   isAuthenticated: false,
-  user: {}
+  jwt: undefined,
 })
 
 /* ------------- Selectors ------------- */
 
 export const UserSelectors = {
-  selectAvatar: state => state.User.avatar
+  selectAvatar: state => state.user.avatar
 }
 
 /* ------------- Reducers ------------- */
 
 // login
 export const login = (state, action) => {
-  const { user, isAuthenticated } = action
-  return state.merge({ isAuthenticated, user })
+  const { user, isAuthenticated, jwt } = action.payload
+  console.log("====action.payload", action.payload)
+  return state.merge({ isAuthenticated, ...user, jwt })
 }
 /* ------------- Hookup Reducers To Types ------------- */
 

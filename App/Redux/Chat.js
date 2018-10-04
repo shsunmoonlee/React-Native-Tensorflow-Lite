@@ -19,7 +19,7 @@ export const INITIAL_STATE = Immutable({
 /* ------------- Selectors ------------- */
 
 export const ChatSelectors = {
-  selectAvatar: state => state.Chat.avatar
+  selectAvatar: state => state.chat.avatar
 }
 
 /* ------------- Reducers ------------- */
@@ -27,6 +27,7 @@ export const ChatSelectors = {
 // login
 export const loadMessages = (state, action) => {
   const { } = action
+
   return state.merge({ messages })
 }
 /* ------------- Hookup Reducers To Types ------------- */

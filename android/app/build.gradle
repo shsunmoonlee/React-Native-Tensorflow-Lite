@@ -150,6 +150,8 @@ dependencies {
     compile "com.android.support:support-v4:27.1.0"
     compile "org.tensorflow:tensorflow-lite:+"
     compile "com.facebook.react:react-native:+"  // From node_modules
+    compile 'com.wonderkiln:camerakit:0.13.1'
+    compile 'org.tensorflow:tensorflow-lite:+'    
 }
 
 // Run this once to be able to run the application with BUCK

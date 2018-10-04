@@ -47,6 +47,7 @@ class Login extends Component {
     console.log("====inside login", email, password)
     this.setState({loading: true})
     try {
+      console.log("===inside try. before first request")
       const response = await feathers.authenticate({
         strategy: 'local',
         email, password
@@ -56,13 +57,13 @@ class Login extends Component {
       console.log("=======second response", response2)
 
       try {
-        const user = await feathers.service('users').get(payload.userId);
+        const user = await feathers.service('users').get(response2.userId);
         console.log("=======user response", user)
 
         this.props.login({user, isAuthenticated: true})
+        this.props.navigation.navigate('Chat');
         // this.user = user;
         // this.isAuthenticated = true;
-        console.log("===received user information", user)
       } catch(e) {
         console.log("authentication failed", e)
       }
