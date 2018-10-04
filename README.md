@@ -1,3 +1,14 @@
+# React Native Tensorflow Lite
+
+Object: Import Tensorflow Lite Android example UI into React Native
+https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite/java/demo
+
+References:
+https://facebook.github.io/react-native/docs/native-components-android
+https://x-team.com/blog/java-ui-component-on-react-native/
+
+
+
 #  SunMoon
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
